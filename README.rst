@@ -3,16 +3,16 @@ Module that helps you to save time and lines
 
 It runs all queries, fetches, connects, disconnects, commits etc. within itself :)
 Just use it like:
+.. code:: shell
+from db import DbHelper
+db = DbHelper()
 
-   >>> from db import DbHelper
-   >>> db = DbHelper()
+SELECT example - 1 (clear query):
+query = "SELECT * FROM table"
+result = db.fetchone(query)
 
-  SELECT example - 1 (clear query)
-      >>> query = "SELECT * FROM table"
-      >>> result = db.fetchone(query)
-
-  SELECT example - 2 (query with data)
-      >>> query = "SELECT * FROM table WHERE some_column = %s"
+SELECT example - 2 (query with data)
+query = "SELECT * FROM table WHERE some_column = %s"
       >>> data = "your param"
       >>> result = db.fetchone(query, data)
 
