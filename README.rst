@@ -35,3 +35,32 @@ don' forget to close_cursor after all
 
 .. code:: python
 	db.close_cursor()
+
+
+
+-------
+Logging
+-------
+
+This library uses the ``logging`` module. To set up logging to standard output, put:
+
+.. code:: python
+
+    import logging
+    logging.basicConfig(level=logging.DEBUG,
+                        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+at the beginning of your script.
+
+You can also use logs in your application by calling ``logging.getLogger()`` and setting the log level you want:
+
+.. code:: python
+
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+
+If you want DEBUG logs instead:
+
+.. code:: python
+
+    logger.setLevel(logging.DEBUG)
