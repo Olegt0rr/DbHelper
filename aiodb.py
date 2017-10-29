@@ -12,17 +12,6 @@ logger = logging.getLogger(f"{__name__}")
 logger.setLevel(logging.INFO)
 
 
-# class SSHHelper(sshtunnel.SSHTunnelForwarder):
-#     def __init__(self, *args, **kwargs):
-#         super().__init__(
-#             ssh_address_or_host=(config.ssh['host'], config.ssh['port']),
-#             ssh_username=config.ssh['user'],
-#             ssh_password=config.ssh['password'],
-#             remote_bind_address=('127.0.0.1', 3306, ),
-#             local_bind_address=('0.0.0.0', 3306, )
-#         )
-
-
 class DbHelper:
     """
     Class help to make clean primary code
