@@ -41,6 +41,7 @@ class DbHelper:
 
             else:
                 logger.debug('db: connection established')
+                break
 
     async def get_cursor(self):
         try:
